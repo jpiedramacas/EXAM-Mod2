@@ -185,10 +185,10 @@ Por favor, asegúrate de que la estructura de directorios sea la siguiente:
 
 1. **Crear el archivo `test_app.py`**:
    ```python
-import unittest
-from app import app
+   import unittest
+   from app import app
 
-class TestApp(unittest.TestCase):
+      class TestApp(unittest.TestCase):
 
     def setUp(self):
         # Configurar la aplicación antes de cada prueba
@@ -211,7 +211,7 @@ class TestApp(unittest.TestCase):
         response = self.app.get('/ruta_invalida')
         self.assertEqual(response.status_code, 404)
 
-if __name__ == '__main__':
+      if __name__ == '__main__':
     unittest.main()
    ```
 
