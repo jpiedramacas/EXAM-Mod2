@@ -59,7 +59,19 @@ Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionand
    cd my_flask_app
    ```
 
-3. **Crear el archivo `app.py`**:
+3. **Crear los archivos 
+
+Perfecto, aquí tienes un ejemplo genérico de árbol de directorios para un proyecto web simple utilizando Flask:
+
+```
+proyecto_web_flask/
+├── app.py
+├── templates/
+     └── formulario.html
+
+`app.py`**
+```
+
    ```python
    from flask import Flask, request, render_template_string
 
@@ -85,7 +97,29 @@ Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionand
        app.run(host='0.0.0.0', port=8080)
    ```
 
-4. **Ejecutar la aplicación**:
+Para el formulario HTML (`formulario.html`), aquí tienes un ejemplo básico:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h2>Formulario</h2>
+    <form method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+```
+
+
+5. **Ejecutar la aplicación**:
    ```sh
    sudo python3 app.py
    ```
