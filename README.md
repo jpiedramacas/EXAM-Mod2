@@ -44,12 +44,6 @@ Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionand
    sudo yum install python3-pip -y
    ```
 
-4. **Instalar y configurar Cloud9**:
-   - Navega a `Servicios > Cloud9` en la consola de AWS.
-   - Crea un nuevo entorno Cloud9.
-   - Selecciona "Crear un entorno EC2" y elige la instancia que has creado anteriormente.
-   - Accede al entorno Cloud9 y realiza las configuraciones necesarias.
-
 ## Sección 2: Desarrollo de la Aplicación Web
 
 ### Paso 1: Creación de la Aplicación Web con Flask
