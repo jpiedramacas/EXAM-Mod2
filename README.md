@@ -14,7 +14,12 @@ Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionand
    - Configura el almacenamiento predeterminado y haz clic en `Revisar y lanzar`.
    - Crea un nuevo par de claves o usa uno existente y guarda el archivo `.pem`.
 
-2. **Conectar a la instancia EC2**:
+2. **Configurar grupos de seguridad**:
+   - En la consola de AWS, navega a `EC2 > Grupos de seguridad`.
+   - Selecciona el grupo de seguridad asociado a tu instancia.
+   - Añade una regla de entrada para permitir el tráfico puerto 8080 y el puerto 5000.
+
+3. **Conectar a la instancia EC2**:
    - Abre tu terminal o línea de comandos.
    - Conéctate a tu instancia con el siguiente comando, reemplazando `your-key.pem` y `ec2-xx-xx-xx-xx.compute-1.amazonaws.com` con tu archivo de clave y dirección pública de la instancia:
      ```sh
@@ -44,14 +49,6 @@ Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionand
    - Crea un nuevo entorno Cloud9.
    - Selecciona "Crear un entorno EC2" y elige la instancia que has creado anteriormente.
    - Accede al entorno Cloud9 y realiza las configuraciones necesarias.
-
-### Paso 3: Configuración de Cortafuegos y Seguridad
-
-1. **Configurar grupos de seguridad**:
-   - En la consola de AWS, navega a `EC2 > Grupos de seguridad`.
-   - Selecciona el grupo de seguridad asociado a tu instancia.
-   - Añade una regla de entrada para permitir el tráfico puerto 8080 y el puerto 5000.
-
 
 ## Sección 2: Desarrollo de la Aplicación Web
 
