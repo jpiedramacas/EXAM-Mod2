@@ -68,10 +68,9 @@ proyecto_web_flask/
 ├── app.py
 ├── templates/
      └── formulario.html
-
-`app.py`**
 ```
 
+`app.py`**
    ```python
    from flask import Flask, request, render_template_string
 
