@@ -70,7 +70,7 @@ proyecto_web_flask/
      └── formulario.html
 ```
 
-`app.py`**
+`app.py`:
    ```python
    from flask import Flask, request, render_template_string
 
