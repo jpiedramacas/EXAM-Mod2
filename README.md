@@ -50,9 +50,8 @@ Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionand
 1. **Configurar grupos de seguridad**:
    - En la consola de AWS, navega a `EC2 > Grupos de seguridad`.
    - Selecciona el grupo de seguridad asociado a tu instancia.
-   - Añade una regla de entrada para permitir el tráfico puerto 8080 y el puerto 5000
+   - Añade una regla de entrada para permitir el tráfico puerto 8080 y el puerto 5000.
 
-   ![Security Group](https://example.com/security-group-configuration.png)
 
 ## Sección 2: Desarrollo de la Aplicación Web
 
@@ -148,3 +147,5 @@ Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionand
 ### Conclusión
 
 Esta guía te ha llevado a través de la configuración de una instancia EC2 en AWS, la instalación de herramientas de desarrollo, la creación de una aplicación web simple con Flask, y la implementación de pruebas automatizadas. Siguiendo estos pasos, deberías tener un entorno de desarrollo funcional y una comprensión básica del desarrollo y prueba de aplicaciones web en Python.
+
+¡Buena suerte en tu prueba piloto!
