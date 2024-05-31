@@ -82,7 +82,7 @@ Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionand
        ''')
 
    if __name__ == '__main__':
-       app.run(host='0.0.0.0', port=80)
+       app.run(host='0.0.0.0', port=8080)
    ```
 
 4. **Ejecutar la aplicación**:
