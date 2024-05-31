@@ -59,44 +59,54 @@ Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionand
    cd my_flask_app
    ```
 
-3. **Crear los archivos 
+3. **Crear los archivos**
 
-Perfecto, aquí tienes un ejemplo genérico de árbol de directorios para un proyecto web simple utilizando Flask:
+Entiendo, parece que estás teniendo problemas con el código. Vamos a corregirlo y asegurarnos de que todo esté en orden. Aquí tienes los códigos actualizados:
 
+### Código de `app.py`:
+
+```python
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/formulario')
+def formulario():
+    return render_template('formulario.html')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080, debug=True)
 ```
-proyecto_web_flask/
-├── app.py
-├── templates/
-     └── formulario.html
+
+### Código de `index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <a href="/formulario"><img src="/static/form_icon.png" alt="Formulario" width="100"></a>
+</body>
+</html>
 ```
 
-`app.py`:
-   ```python
-   from flask import Flask, request, render_template_string
-
-   app = Flask(__name__)
-
-   @app.route('/')
-   def home():
-       return '¡Hola, Mundo!'
-
-   @app.route('/form', methods=['GET', 'POST'])
-   def form():
-       if request.method == 'POST':
-           nombre = request.form['nombre']
-           return f'Hola, {nombre}!'
-       return render_template_string('''
-           <form method="post">
-               Nombre: <input type="text" name="nombre">
-               <input type="submit" value="Enviar">
-           </form>
-       ''')
-
-   if __name__ == '__main__':
-       app.run(host='0.0.0.0', port=8080)
-   ```
-
-Para el formulario HTML (`formulario.html`), aquí tienes un ejemplo básico:
+### Código de `formulario.html`:
 
 ```html
 <!DOCTYPE html>
@@ -105,16 +115,42 @@ Para el formulario HTML (`formulario.html`), aquí tienes un ejemplo básico:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h2>Formulario</h2>
-    <form method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+    <form method="POST" action="/formulario">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br>
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" required><br>
+        <label for="altura">Altura:</label><br>
+        <input type="number" id="altura" name="altura" required><br>
         <button type="submit">Enviar</button>
     </form>
 </body>
 </html>
+```
+
+Por favor, asegúrate de que la estructura de directorios sea la siguiente:
+
+```
+.
+├── app.py
+└── templates
+    ├── formulario.html
+    └── index.html
 ```
 
 
