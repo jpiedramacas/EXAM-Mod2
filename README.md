@@ -175,10 +175,9 @@ Por favor, asegúrate de que la estructura de directorios sea la siguiente:
    sudo python3 app.py
    ```
 
-### Paso 2: Implementación de Funcionalidades Básicas
-
-- Añade al menos una ruta (`/` que muestra "¡Hola, Mundo!").
-- Añade al menos un formulario (`/form` que acepta un nombre y muestra un saludo personalizado).
+   ```sh
+   http://localhost:8080/
+   ```
 
 ## Sección 3: Pruebas y Depuración
 
