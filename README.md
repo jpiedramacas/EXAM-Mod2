@@ -66,23 +66,29 @@ Entiendo, parece que estás teniendo problemas con el código. Vamos a corregirl
 ### Código de `app.py`:
 
 ```python
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def presentacion():
+    return render_template('presentacion.html')
 
-@app.route('/formulario')
+@app.route('/formulario', methods=['GET', 'POST'])
 def formulario():
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        apellido = request.form['apellido']
+        edad = request.form['edad']
+        altura = request.form['altura']
+        return f'Nombre: {nombre}, Apellido: {apellido}, Edad: {edad}, Altura: {altura}'
     return render_template('formulario.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
 ```
 
-### Código de `index.html`:
+### Código de `presentacion.html`:
 
 ```html
 <!DOCTYPE html>
@@ -90,18 +96,19 @@ if __name__ == '__main__':
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido</title>
+    <title>Presentación del Proyecto</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            text-align: center;
+            padding: 50px;
         }
     </style>
 </head>
 <body>
-    <a href="/formulario"><img src="/static/form_icon.png" alt="Formulario" width="100"></a>
+    <h1>Bienvenido al Proyecto</h1>
+    <p>Este es un proyecto de ejemplo para mostrar el uso de Flask.</p>
+    <p>Haga clic en el botón para ir al formulario:</p>
+    <a href="/formulario"><button>Ir al Formulario</button></a>
 </body>
 </html>
 ```
@@ -121,21 +128,30 @@ if __name__ == '__main__':
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
         }
         form {
             text-align: center;
+            margin-top: 20px;
+        }
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+        input {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <form method="POST" action="/formulario">
-        <label for="nombre">Nombre:</label><br>
+        <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required><br>
-        <label for="apellido">Apellido:</label><br>
+        <label for="apellido">Apellido:</label>
         <input type="text" id="apellido" name="apellido" required><br>
-        <label for="edad">Edad:</label><br>
+        <label for="edad">Edad:</label>
         <input type="number" id="edad" name="edad" required><br>
-        <label for="altura">Altura:</label><br>
+        <label for="altura">Altura:</label>
         <input type="number" id="altura" name="altura" required><br>
         <button type="submit">Enviar</button>
     </form>
@@ -150,7 +166,7 @@ Por favor, asegúrate de que la estructura de directorios sea la siguiente:
 ├── app.py
 └── templates
     ├── formulario.html
-    └── index.html
+    └── presentacion.html
 ```
 
 
