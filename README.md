@@ -1,4 +1,4 @@
-https://gist.githubusercontent.com/raw/af76a4c245b302206b16aec503dbe07b/markmap.md
+[MAPA MENTAL](https://jpiedramacas.github.io/EXAM-Mod2/mapa_mental.html)
 
 ### Resumen del Curso: Programador de Sistemas AWS - Módulo 2
 
