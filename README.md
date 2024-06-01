@@ -1,229 +1,82 @@
-# PRUEBA PILOTO EXAMEN MÓDULO 2
+### Resumen del Curso: Programador de Sistemas AWS - Módulo 2
 
-Esta guía te ayudará a completar la prueba piloto del módulo 2, proporcionando instrucciones detalladas y sencillas para cada sección. Asegúrate de seguir los pasos y comandos proporcionados. Está permitido utilizar todos los recursos de internet para realizar la prueba.
+#### Introducción al Ciclo de Vida del Software
 
-## Sección 1: Configuración del Entorno de Desarrollo
+El ciclo de vida del software incluye varias fases desde la concepción hasta la retirada del software, abarcando modelos prescriptivos y adaptativos.
 
-### Paso 1: Configuración de una Instancia EC2 en AWS con Amazon Linux
+#### Modelos del Ciclo de Vida del Software
 
-1. **Crear una instancia EC2**:
-   - Inicia sesión en la consola de AWS.
-   - Ve a `Servicios > EC2` y selecciona `Lanzar instancia`.
-   - Elige la AMI de `Amazon Linux 2`.
-   - Selecciona el tipo de instancia, `t2.micro` (gratis en el nivel gratuito de AWS).
-   - Configura el almacenamiento predeterminado y haz clic en `Revisar y lanzar`.
-   - Crea un nuevo par de claves o usa uno existente y guarda el archivo `.pem`.
+1. **Modelo en Cascada**:
+   - **Fases**: Pre Análisis, Análisis, Diseño, Desarrollo, Pruebas, Implantación y Mantenimiento.
+   - **Ventajas**: Estructura clara y fácil gestión.
+   - **Desventajas**: Rigidez y dificultad para manejar cambios.
 
-2. **Configurar grupos de seguridad**:
-   - En la consola de AWS, navega a `EC2 > Grupos de seguridad`.
-   - Selecciona el grupo de seguridad asociado a tu instancia.
-   - Añade una regla de entrada para permitir el tráfico puerto 8080 y el puerto 5000.
+2. **Modelo Iterativo**:
+   - **Características**: Desarrollos en ciclos repetitivos con retroalimentación continua.
+   - **Beneficios**: Identificación temprana de problemas y flexibilidad.
 
-3. **Conectar a la instancia EC2**:
-   - Abre tu terminal o línea de comandos.
-   - Conéctate a tu instancia con el siguiente comando, reemplazando `your-key.pem` y `ec2-xx-xx-xx-xx.compute-1.amazonaws.com` con tu archivo de clave y dirección pública de la instancia:
-     ```sh
-     chmod 400 your-key.pem
-     ssh -i "your-key.pem" ec2-user@ec2-xx-xx-xx-xx.compute-1.amazonaws.com
-     ```
+3. **Modelo Incremental**:
+   - **Diferencia con Iterativo**: Cada iteración añade una funcionalidad completa.
+   - **Beneficios**: Entrega progresiva y mayor estabilidad.
 
-### Paso 2: Instalación y Configuración de Herramientas de Desarrollo
+4. **Modelo en V**:
+   - **Descripción**: Enfocado en la verificación y validación en cada fase.
+   - **Ventajas**: Calidad asegurada mediante pruebas rigurosas.
 
-1. **Actualizar el sistema**:
-   ```sh
-   sudo yum update -y
-   ```
+5. **Modelo Basado en Componentes (CBSE)**:
+   - **Enfoque**: Desarrollo con módulos reutilizables.
+   - **Beneficios**: Reducción de tiempos y costos, reutilización de componentes.
 
-2. **Instalar Python**:
-   ```sh
-   sudo yum install python3 -y
-   ```
+6. **Modelo de Desarrollo Rápido (RAD)**:
+   - **Fases**: Modelado de Gestión, Modelado de Datos, Modelado de Proceso, Generación de Aplicaciones, Pruebas de Entrega.
+   - **Ventajas**: Desarrollo rápido y adaptación a cambios.
 
-3. **Instalar pip**:
-   ```sh
-   sudo yum install python3-pip -y
-   ```
+#### Metodologías Ágiles
 
-## Sección 2: Desarrollo de la Aplicación Web
+**Agile** promueve la entrega rápida y continua de software, adaptándose a cambios y colaborando estrechamente con el cliente. 
 
-### Paso 1: Creación de la Aplicación Web con Flask
+- **Principios Fundamentales**:
+  1. Entrega continua de software valioso.
+  2. Adaptación a cambios, incluso tardíos.
+  3. Entregas frecuentes de software funcional.
+  4. Colaboración cercana con el cliente.
+  5. Equipos motivados y comunicación cara a cara.
+  6. Software funcionando como medida de progreso.
+  7. Desarrollo sostenible y excelencia técnica.
+  8. Equipos autoorganizados y simplicidad.
 
-1. **Instalar Flask**:
-   ```sh
-   pip3 install Flask
-   ```
+#### Metodología Scrum
 
-2. **Crear la estructura del proyecto**:
-   ```sh
-   mkdir my_flask_app
-   cd my_flask_app
-   ```
+**Scrum** es una metodología ágil estructurada en roles, artefactos y eventos.
 
-3. **Crear los archivos**
+1. **Roles en Scrum**:
+   - **Product Owner (PO)**: Prioriza y gestiona el Product Backlog, define requisitos y toma decisiones.
+   - **Scrum Master**: Facilita el proceso Scrum, elimina impedimentos y enseña prácticas ágiles.
+   - **Equipo de Desarrollo**: Multidisciplinario y autoorganizado, responsable de entregar incrementos de valor.
 
-Entiendo, parece que estás teniendo problemas con el código. Vamos a corregirlo y asegurarnos de que todo esté en orden. Aquí tienes los códigos actualizados:
+2. **Artefactos de Scrum**:
+   - **Product Backlog**: Lista priorizada de todo el trabajo por hacer.
+   - **Sprint Backlog**: Elementos del Product Backlog seleccionados para el sprint actual.
+   - **Incremento**: Versión potencialmente entregable del producto al final de cada sprint.
 
-### Código de `app.py`:
+3. **Eventos de Scrum**:
+   - **Sprint**: Ciclo de trabajo de 1 a 4 semanas.
+   - **Reunión de Planificación del Sprint**: Definición de objetivos y planificación del sprint.
+   - **Daily Scrum**: Reunión diaria de 15 minutos para sincronizar actividades.
+   - **Revisión del Sprint**: Evaluación del incremento y feedback de stakeholders.
+   - **Retrospectiva del Sprint**: Reflexión sobre el proceso y mejora continua.
 
-```python
-from flask import Flask, render_template, request, redirect, url_for
+4. **Beneficios de Scrum**:
+   - Mayor transparencia y adaptabilidad.
+   - Entrega temprana de valor y satisfacción del cliente.
 
-app = Flask(__name__)
+5. **Desafíos de Scrum**:
+   - Resistencia al cambio y gestión de equipos y stakeholders.
+   - Transición hacia una cultura ágil y clara gestión de roles.
 
-@app.route('/')
-def presentacion():
-    return render_template('presentacion.html')
+6. **Escalado de Scrum**:
+   - **Scrum of Scrums**: Coordinación entre múltiples equipos Scrum.
+   - **SAFe (Scaled Agile Framework)**: Estructura para escalar Scrum a nivel empresarial.
+   - **LeSS (Large-Scale Scrum)**: Framework minimalista para colaboración entre equipos.
 
-@app.route('/formulario', methods=['GET', 'POST'])
-def formulario():
-    if request.method == 'POST':
-        nombre = request.form['nombre']
-        apellido = request.form['apellido']
-        edad = request.form['edad']
-        altura = request.form['altura']
-        return f'Nombre: {nombre}, Apellido: {apellido}, Edad: {edad}, Altura: {altura}'
-    return render_template('formulario.html')
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
-```
-
-### Código de `presentacion.html`:
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentación del Proyecto</title>
-    <style>
-        body {
-            text-align: center;
-            padding: 50px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Bienvenido al Proyecto</h1>
-    <p>Este es un proyecto de ejemplo para mostrar el uso de Flask.</p>
-    <p>Haga clic en el botón para ir al formulario:</p>
-    <a href="/formulario"><button>Ir al Formulario</button></a>
-</body>
-</html>
-```
-
-### Código de `formulario.html`:
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-        form {
-            text-align: center;
-            margin-top: 20px;
-        }
-        label {
-            margin-bottom: 10px;
-            display: block;
-        }
-        input {
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-    <form method="POST" action="/formulario">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br>
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required><br>
-        <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad" required><br>
-        <label for="altura">Altura:</label>
-        <input type="number" id="altura" name="altura" required><br>
-        <button type="submit">Enviar</button>
-    </form>
-</body>
-</html>
-```
-
-Por favor, asegúrate de que la estructura de directorios sea la siguiente:
-
-```
-.
-├── app.py
-└── templates
-    ├── formulario.html
-    └── presentacion.html
-```
-
-
-5. **Ejecutar la aplicación**:
-   ```sh
-   sudo python3 app.py
-   ```
-
-   ```sh
-   http://localhost:8080/
-   ```
-
-## Sección 3: Pruebas y Depuración
-
-### Paso 1: Desarrollo de Casos de Prueba
-
-1. **Crear el archivo `test_app.py`**:
-   ```python
-   import unittest
-   from app import app
-
-      class TestApp(unittest.TestCase):
-
-    def setUp(self):
-        # Configurar la aplicación antes de cada prueba
-        self.app = app.test_client()
-        self.app.testing = True
-
-    def test_presentacion(self):
-        # Probar la página de presentación
-        response = self.app.get('/')
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Bienvenido al Proyecto', response.data)
-
-    def test_formulario(self):
-        # Probar el formulario
-        response = self.app.post('/formulario', data=dict(nombre='John', apellido='Doe', edad='30', altura='180'))
-        self.assertIn(b'Nombre: John, Apellido: Doe, Edad: 30, Altura: 180', response.data)
-
-    def test_ruta_invalida(self):
-        # Probar una ruta no válida
-        response = self.app.get('/ruta_invalida')
-        self.assertEqual(response.status_code, 404)
-
-      if __name__ == '__main__':
-    unittest.main()
-   ```
-
-### Paso 2: Ejecución de Pruebas
-
-1. **Ejecutar las pruebas**:
-   ```sh
-   python3 -m unittest test_app.py
-   ```
-
-### Conclusión
-
-Esta guía te ha llevado a través de la configuración de una instancia EC2 en AWS, la instalación de herramientas de desarrollo, la creación de una aplicación web simple con Flask, y la implementación de pruebas automatizadas. Siguiendo estos pasos, deberías tener un entorno de desarrollo funcional y una comprensión básica del desarrollo y prueba de aplicaciones web en Python.
-
-¡Buena suerte en tu prueba piloto!
+Este resumen proporciona una visión integral de los conceptos y estructuras clave de los modelos de ciclo de vida del software y la metodología Scrum, incluyendo sus roles, artefactos, eventos, beneficios, desafíos y enfoques de escalado.
