@@ -9,7 +9,7 @@ El ciclo de vida del software es una estructura utilizada para planificar y cont
 
 ## Modelo en Cascada
 El modelo en cascada es un enfoque lineal y secuencial donde el progreso fluye en una sola dirección hacia abajo como una cascada a través de las fases de análisis, diseño, implementación, pruebas, despliegue y mantenimiento.
-
+![Modelo en Cascada](assets/modelodecascada.jpg)
 - **Fases**:
   - **Pre Análisis**: Identificación de la necesidad del proyecto y su viabilidad.
   - **Análisis**: Recolección y documentación de requisitos.
