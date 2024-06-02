@@ -66,6 +66,7 @@ El modelo en V es una extensión del modelo en cascada que enfatiza la verificac
 
 ## Modelo Basado en Componentes (CBSE)
 El desarrollo basado en componentes se enfoca en la reutilización de módulos existentes con interfaces definidas y claramente especificadas.
+
 ![CBSE](assets/Modelo%20Basado%20en%20Componentes%20(CBSE).png)
 
 - **Enfoque**:
@@ -179,5 +180,5 @@ Las metodologías ágiles son un conjunto de principios para el desarrollo de so
 
 1. **Scrum of Scrums**: Coordinación entre múltiples equipos Scrum mediante representantes que se reúnen regularmente.
 2. **SAFe (Scaled Agile Framework)**: Proporciona una estructura para escalar Scrum a nivel empresarial, con roles y eventos adicionales.
-3. **LeSS (Large-Scale Scrum)**: Framework minimalista que se enfoca en la simplicidad y la colaboración entre múltiples equipos 【3†source】.
+3. **LeSS (Large-Scale Scrum)**: Framework minimalista que se enfoca en la simplicidad y la colaboración entre múltiples equipos.
 
