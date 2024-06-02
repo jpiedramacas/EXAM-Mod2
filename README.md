@@ -7,7 +7,7 @@ El ciclo de vida del software es una estructura utilizada para planificar y cont
 
 ### Modelos del Ciclo de Vida del Software
 
-#### Modelo en Cascada
+## Modelo en Cascada
 El modelo en cascada es un enfoque lineal y secuencial donde el progreso fluye en una sola dirección hacia abajo como una cascada a través de las fases de análisis, diseño, implementación, pruebas, despliegue y mantenimiento.
 
 - **Fases**:
