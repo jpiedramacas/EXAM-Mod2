@@ -9,7 +9,7 @@ El ciclo de vida del software es una estructura utilizada para planificar y cont
 
 ## Modelo en Cascada
 El modelo en cascada es un enfoque lineal y secuencial donde el progreso fluye en una sola dirección hacia abajo como una cascada a través de las fases de análisis, diseño, implementación, pruebas, despliegue y mantenimiento.
-![Modelo en Cascada](assets/modelodecascada.jpg)
+![Modelo en Cascada](assets/modelo%20de%20cascada.jpg)
 - **Fases**:
   - **Pre Análisis**: Identificación de la necesidad del proyecto y su viabilidad.
   - **Análisis**: Recolección y documentación de requisitos.
@@ -27,9 +27,9 @@ El modelo en cascada es un enfoque lineal y secuencial donde el progreso fluye e
   - No es adecuado para proyectos donde los requisitos cambian frecuentemente.
   - Dificultad para volver a fases anteriores sin afectar las siguientes.
 
-#### Modelo Iterativo
+## Modelo Iterativo
 El modelo iterativo se basa en la repetición de un conjunto de actividades durante cada iteración, permitiendo mejoras y refinamientos sucesivos del sistema.
-
+![Modelo Iterativo](assets/Modelo%20Iterativo.jpg)
 - **Características**:
   - Desarrollos en ciclos repetitivos.
   - Retroalimentación continua y ajustes basados en pruebas y evaluación del cliente.
@@ -38,8 +38,9 @@ El modelo iterativo se basa en la repetición de un conjunto de actividades dura
   - Identificación temprana de problemas.
   - Mayor flexibilidad y adaptación a cambios en los requisitos.
 
-#### Modelo Incremental
+## Modelo Incremental
 El modelo incremental combina elementos del modelo en cascada con el enfoque iterativo. Se desarrolla una versión básica del software y, en incrementos sucesivos, se añaden funcionalidades adicionales.
+![Modelo Incremental](assets/Modelo%20Incremental.jpg)
 
 - **Diferencia con Iterativo**:
   - Cada iteración añade una funcionalidad completa al producto, en lugar de mejorar continuamente todo el sistema.
@@ -48,8 +49,9 @@ El modelo incremental combina elementos del modelo en cascada con el enfoque ite
   - Permite la entrega progresiva de partes funcionales del software.
   - Proporciona mayor estabilidad y confiabilidad del sistema con cada incremento.
 
-#### Modelo en V
+## Modelo en V
 El modelo en V es una extensión del modelo en cascada que enfatiza la verificación y validación en cada fase de desarrollo.
+![Modelo en V](assets/Modelo%20en%20V.png)
 
 - **Fases**:
   - **Planificación y Análisis**: Similar al modelo en cascada.
@@ -62,8 +64,9 @@ El modelo en V es una extensión del modelo en cascada que enfatiza la verificac
   - Asegura la calidad mediante pruebas rigurosas.
   - Las pruebas tempranas reducen el costo de errores posteriores.
 
-#### Modelo Basado en Componentes (CBSE)
+## Modelo Basado en Componentes (CBSE)
 El desarrollo basado en componentes se enfoca en la reutilización de módulos existentes con interfaces definidas y claramente especificadas.
+![CBSE](assets/Modelo%20Basado%20en%20Componentes%20(CBSE).png)
 
 - **Enfoque**:
   - Descomposición del sistema en componentes funcionales que pueden ser desarrollados de forma independiente.
@@ -76,8 +79,9 @@ El desarrollo basado en componentes se enfoca en la reutilización de módulos e
   - Integración de componentes heterogéneos.
   - Garantizar la compatibilidad y la cohesión del sistema.
 
-#### Modelo de Desarrollo Rápido (RAD)
+## Modelo de Desarrollo Rápido (RAD)
 El RAD es un modelo que enfatiza el desarrollo rápido mediante prototipos y un enfoque iterativo con entregas rápidas.
+![RAD](assets/Modelo%20de%20Desarrollo%20Rápido%20(RAD).png)
 
 - **Fases**:
   - **Modelado de Gestión**: Identificación de requisitos a nivel de negocio.
@@ -113,9 +117,11 @@ Las metodologías ágiles son un conjunto de principios para el desarrollo de so
   11. Equipos autoorganizados que generan las mejores arquitecturas, requisitos y diseños.
   12. Adaptación regular a circunstancias cambiantes, ajustando el comportamiento del equipo.
 
-#### Metodología Scrum
+## Metodología Scrum
 
 **Scrum** es una metodología ágil que se enfoca en la entrega incremental de valor en proyectos de desarrollo de software. Se basa en un marco de trabajo iterativo y colaborativo, estructurado en roles, artefactos y eventos específicos.
+
+![Scrum](assets/ScrumPoster.png)
 
 #### Roles en Scrum
 
