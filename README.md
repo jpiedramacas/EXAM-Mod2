@@ -1,6 +1,6 @@
 [MAPA MENTAL](https://jpiedramacas.github.io/EXAM-Mod2/mapa_mental.html)
 
-### Resumen del Curso: Programador de Sistemas AWS - Módulo 2
+# Resumen del Curso: Programador de Sistemas AWS - Módulo 2
 
 ### Introducción al Ciclo de Vida del Software
 El ciclo de vida del software es una estructura utilizada para planificar y controlar el proceso de desarrollo de un sistema de información. Los modelos de ciclo de vida del software proporcionan una metodología para mejorar la calidad del software y la administración del proyecto. Se dividen en dos grandes categorías: modelos prescriptivos y modelos adaptativos.
